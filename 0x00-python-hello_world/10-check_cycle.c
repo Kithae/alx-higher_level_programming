@@ -1,27 +1,27 @@
 #include "lists.h"
 
 /**
- * check_cycle - check if the linked list has a cycle
- * @list: the list to be checked 
- * Return: 1 cycle, 0 no cycle
+ * check_cycle – a function that confirms cycles in the list
+ * @list: the linked list
+ * Return: 1 else, 0
  */
 
 int check_cycle(listint_t *list)
 {
-	listint_t *ptr_s, *ptr_f;
+	listint_t *ptr_a, *ptr_b;
 
 	if (!list || !list->next)
 		return (0);
-	ptr_s = list->next;
-	ptr_f = list->next->next;
-	while (ptr_s && ptr_f && ptr_f->next)
+	ptr_a = list->next;
+	ptr_b = list->next->next;
+	while (ptr_a && ptr_b && ptr_b->next)
 	{
-		if (ptr_s == ptr_f)
+		if (ptr_a == ptr_b)
 		{
 			return (1);
 		}
-		ptr_s = ptr_s->next;
-		ptr_f = ptr_f->next->next;
+		ptr_a = ptr_a->next;
+		ptr_b = ptr_b->next->next;
 	}
 	return (0);
 }
