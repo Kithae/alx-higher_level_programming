@@ -1,8 +1,2 @@
 #!/bin/bash 
-pyfile=$PYFILE  /*we call the file name from the env variable*/
-if [ ! -f "$pyfile" ]; /*to confirm file exists*/
-then 
-echo "$pyfile not found"
- exit 1
-fi 
-python "$pyfile" /*run the script*/
+python3 "$pyfile"
