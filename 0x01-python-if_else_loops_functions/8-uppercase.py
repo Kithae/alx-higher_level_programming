@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-def upper(x):
-    for y in x:
-        charac = ord(y)
-        if charac > 96 and charac < 123:
-            charac -= 32
-        print("{}".format(chr(charac)), end='')
-    print('')
+def str_uper(char):
+    if ord(char) >= 97 and ord(char) <= 122:
+        return (ord(char) - 32)
+    else:
+        return ord(char)
+
+
+def uppercase(str):
+    new = ""
+    for char in str:
+        new += "%c" % str_uper(char)
+    print("{:s}".format(new))
