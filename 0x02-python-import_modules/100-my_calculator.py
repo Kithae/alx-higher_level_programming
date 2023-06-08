@@ -2,25 +2,25 @@
 if __name__ == "__main__":
     import sys
 
-    a = len(sys.argv) - 1
-    if a != 3:
+    x = len(sys.argv) - 1
+    if x != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    b = sys.argv[2]
-    if b != '+' and b != '-' and b != '*' and b != '/':
+    y = sys.argv[2]
+    if y != '+' and y != '-' and y != '*' and y != '/':
         print("Invalid operators. Please use only these operators: +, -, * & /")
         sys.exit(1)
 
     from calculator_1 import add, sub, mul, div
-    x = int(sys.argv[1])
-    y = int(sys.argv[3])
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
 
-    if y == '+':
-        print("{} + {} = {}".format(x, y, add(x, y)))
-    elif y == '-':
-        print("{} - {} = {}".format(x, y, sub(x, y)))
-    elif y == '*':
-        print("{} * {} = {}".format(x, y, mul(x, y)))
+    if b == '+':
+        print("{} + {} = {}".format(a, b, add(a, b)))
+    elif b == '-':
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif b == '*':
+        print("{} * {} = {}".format(a, b, mul(a, b)))
     else:
-        print("{} / {} = {}".format(x, y, div(x, y)))
+        print("{} / {} = {}".format(a, b, div(a, b)))
