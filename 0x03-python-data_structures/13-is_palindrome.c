@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * is_palindrome – a function for checking palindrome in singly linked lists
+ * is_palindrome - a function for hecking palindrome in singly linked lists
  * @head: a pointer
  * Return: 1 else,  0
  */
@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
 {
 	int a = 0, b, k;
 	listint_t  *node = *head, *curr, *lst;
-	
+
 	if (!head)
 		return (1);
 	while (node)
