@@ -27,7 +27,7 @@ class Rectangle:
         """declares Rectangle width instance
 
         Args:
-            value: positive integer width value 
+            value: positive integer width value
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")

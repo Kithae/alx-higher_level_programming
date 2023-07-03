@@ -18,7 +18,8 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        """Returns Rectangle instance string representation - informal & nicely printable 
+        """Returns Rectangle instance string representation
+        - informal & nicely printable
         , using the '#' character."""
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -36,10 +37,10 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """declares Rectangle instance width 
+        """declares Rectangle instance width
 
         Args:
-            value: positive integer width value 
+            value: positive integer width value
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -57,7 +58,7 @@ class Rectangle:
         """decares Rectangle instance height
 
         Args:
-            value: positive integer height value 
+            value: positive integer height value
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
