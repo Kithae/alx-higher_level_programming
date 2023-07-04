@@ -1,0 +1,87 @@
+==================================
+``5-text_indentation`` module
+==================================
+
+Testing ``text-indentation``
+---------------------------
+
+To import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Next we use it:
+
+    >>> text_indentation("hey.")
+    hey.
+    <BLANKLINE>
+
+    >>> text_indentation("hey. guys: I am cool!")
+    hey.
+    <BLANKLINE>
+    guys:
+    <BLANKLINE>
+    I am cool!
+
+    >>> text_indentation("""sir ipsum dolor get amet, hiy adipiscing shoot. \
+    ... Quonam same? sure igitur tibi search videor an totas saga commovere? \
+    ... Non holla hoc: igitur ne high quidem. Fortasse id galaxy, sed ubi choir: \
+    ... Plus semper see? Teneo, inquit, get illi videri see dolere. \
+    ... move idem ad boo vel temperantiam, so est moderatio fare \
+    ... rationi oboediens. we id dicis, you. Inde sermone no fee illa a Dipylo \
+    ... myself confecimus. Sin squid quid voles, nope. Quae animi in suum \
+    ... cuique church atque hanc, my dico. Utinam you dicerent alium me \
+    ... beatiorem! search ruinas videres""")
+    sir ipsum dolor get amet, hiy adipiscing shoot.
+    <BLANKLINE>
+    Quonam same?
+    <BLANKLINE>
+    sure igitur tibi search videor an totas saga commovere?
+    <BLANKLINE>
+    Non holla hoc:
+    <BLANKLINE>
+    igitur ne high quidem.
+    <BLANKLINE>
+    Fortasse id galaxy, sed ubi choir:
+    <BLANKLINE>
+    Plus semper see?
+    <BLANKLINE>
+    Teneo, inquit, get illi videri see dolere.
+    <BLANKLINE>
+    move idem ad boo vel temperantiam, so est moderatio fare rationi oboediens.
+    <BLANKLINE>
+    we id dicis, you.
+    <BLANKLINE>
+    Inde sermone no fee illa a Dipylo myself confecimus.
+    <BLANKLINE>
+    Sin squid quid voles, nope.
+    <BLANKLINE>
+    Quae animi in suum cuique church atque hanc, my dico.
+    <BLANKLINE>
+    Utinam you dicerent alium me beatiorem! search ruinas videres
+
+    >>> text_indentation(".    : ?")
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation("school")
+    school
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation("bye\n\nThere.")
+    bye
+    <BLANKLINE>
+    There.
+    <BLANKLINE>
+
+    >>> text_indentation("")
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
